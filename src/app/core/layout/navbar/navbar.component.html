@@ -1,0 +1,19 @@
+<nav class="flex flex-col gap-1 px-3">
+  <a
+    routerLink="/products"
+    routerLinkActive="bg-violet-50 text-violet-600 border-violet-200"
+    [routerLinkActiveOptions]="{ exact: false }"
+    class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-700 hover:bg-slate-100 border border-transparent transition-colors"
+  >
+    <i class="pi pi-box text-lg"></i>
+    <span>Products</span>
+  </a>
+  <a
+    routerLink="/cart"
+    routerLinkActive="bg-violet-50 text-violet-600 border-violet-200"
+    class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-700 hover:bg-slate-100 border border-transparent transition-colors"
+  >
+    <i class="pi pi-shopping-cart text-lg"></i>
+    <span>Cart</span>
+  </a>
+</nav>
