@@ -1,1 +1,30 @@
-<p>products works!</p>
+<div class="flex h-full gap-4 p-4">
+  <aside class="w-56 shrink-0">
+    <app-products-filters></app-products-filters>
+  </aside>
+
+  <section class="flex-1 min-w-0">
+    <app-products-list></app-products-list>
+  </section>
+</div>
+
+<p-drawer
+  [visible]="store.drawerVisible()"
+  (visibleChange)="onDrawerVisibleChange($event)"
+  position="right"
+  [header]="store.selectedProduct()?.title ?? 'Product details'"
+  [closable]="true"
+  [modal]="true"
+  [dismissible]="true"
+  styleClass="w-full max-w-md"
+>
+  <ng-template pTemplate="content">
+    @if (store.detailsLoading()) {
+      <div class="flex items-center justify-center py-12">
+        <i class="pi pi-spin pi-spinner text-3xl text-rose-500"></i>
+      </div>
+    } @else {
+      <app-product-details></app-product-details>
+    }
+  </ng-template>
+</p-drawer>
