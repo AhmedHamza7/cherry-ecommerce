@@ -1,17 +1,17 @@
-<div class="flex h-screen bg-slate-50">
-  <aside class="flex flex-col w-56 shrink-0 bg-white border-r border-slate-200 shadow-sm">
-    <div class="flex justify-center py-6 border-b border-slate-100">
-      <a routerLink="/" class="flex items-center justify-center w-12 h-12 rounded-xl bg-violet-500 text-white shadow-md hover:bg-violet-600 transition-colors">
+<div class="flex h-screen">
+  <aside class="flex flex-col w-56 shrink-0 bg-white border-r border-rose-200 shadow-sm">
+    <div class="flex justify-center py-6 border-b border-rose-100">
+      <a routerLink="/" class="flex items-center justify-center w-12 h-12 rounded-xl bg-rose-600 text-white shadow-md hover:bg-rose-700 transition-colors">
         <i class="pi pi-shop text-2xl"></i>
       </a>
     </div>
 
     <app-navbar class="flex-1 py-4"></app-navbar>
 
-    <app-footer class="pt-4 pb-6 border-t border-slate-100"></app-footer>
+    <app-footer class="pt-4 pb-6 border-t border-rose-100"></app-footer>
   </aside>
 
-  <main class="flex-1 overflow-auto p-7">
+  <main class="flex-1 overflow-auto p-2">
     <router-outlet></router-outlet>
   </main>
 </div>

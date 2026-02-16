@@ -5,8 +5,8 @@
       type="button"
       (click)="setCategory(null)"
       class="rounded-lg px-3 py-2 text-left text-sm transition"
-      [class.bg-rose-50]="!store.selectedCategory()"
-      [class.text-rose-600]="!store.selectedCategory()"
+      [class.bg-rose-100]="!store.selectedCategory()"
+      [class.text-rose-700]="!store.selectedCategory()"
       [class.text-slate-600]="store.selectedCategory()"
       [class.hover:bg-slate-100]="store.selectedCategory()"
     >
@@ -17,8 +17,8 @@
         type="button"
         (click)="setCategory(cat)"
         class="rounded-lg px-3 py-2 text-left text-sm capitalize transition"
-        [class.bg-rose-50]="store.selectedCategory() === cat"
-        [class.text-rose-600]="store.selectedCategory() === cat"
+        [class.bg-rose-100]="store.selectedCategory() === cat"
+        [class.text-rose-700]="store.selectedCategory() === cat"
         [class.text-slate-600]="store.selectedCategory() !== cat"
         [class.hover:bg-slate-100]="store.selectedCategory() !== cat"
       >

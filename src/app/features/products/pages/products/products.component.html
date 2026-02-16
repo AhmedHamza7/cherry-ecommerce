@@ -16,15 +16,17 @@
   [closable]="true"
   [modal]="true"
   [dismissible]="true"
-  styleClass="w-full max-w-md"
+  styleClass="w-full max-w-md drawer-white-bg product-details-drawer"
 >
   <ng-template pTemplate="content">
-    @if (store.detailsLoading()) {
-      <div class="flex items-center justify-center py-12">
-        <i class="pi pi-spin pi-spinner text-3xl text-rose-500"></i>
-      </div>
-    } @else {
-      <app-product-details></app-product-details>
-    }
+    <div class="bg-white min-h-full p-4">
+      @if (store.detailsLoading()) {
+        <div class="flex items-center justify-center py-12">
+          <i class="pi pi-spin pi-spinner text-3xl text-rose-600"></i>
+        </div>
+      } @else {
+        <app-product-details></app-product-details>
+      }
+    </div>
   </ng-template>
 </p-drawer>

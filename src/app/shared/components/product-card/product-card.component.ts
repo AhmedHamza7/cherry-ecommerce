@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, input, output } from '@angular/core';
+import { Product } from '../../../features/products/models/product.model';
 
 @Component({
   selector: 'app-product-card',
@@ -8,5 +9,10 @@ import { Component } from '@angular/core';
   styleUrl: './product-card.component.scss'
 })
 export class ProductCardComponent {
+  product = input.required<Product>();
+  cardClick = output<void>();
 
+  onClick(): void {
+    this.cardClick.emit();
+  }
 }

@@ -4,12 +4,16 @@ import { ProductsService } from '../services/products.service';
 
 @Injectable({ providedIn: 'root' })
 export class ProductsStore {
-  private _products = signal<Product[]>([]);
+
+  // private props to edit state values locally without getting them to the outside
+  private _products = signal<Product[]>([])
   private _selectedProduct = signal<Product | null>(null);
   private _loading = signal(false);
   private _detailsLoading = signal(false);
   private _drawerVisible = signal(false);
 
+  // readonly props to only show values to the outside, not allow to edit them.
+  // asReadonly() is a method that returns a readonly version of the signal
   readonly products = this._products.asReadonly();
   readonly selectedProduct = this._selectedProduct.asReadonly();
   readonly loading = this._loading.asReadonly();

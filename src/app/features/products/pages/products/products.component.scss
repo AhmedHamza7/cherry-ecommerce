@@ -2,3 +2,10 @@
   display: block;
   height: 100%;
 }
+
+::ng-deep {
+  .product-details-drawer.p-drawer-right {
+    width: 40rem;
+    padding: 1rem;
+  }
+}
