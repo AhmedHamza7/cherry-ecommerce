@@ -14,4 +14,18 @@ export class ProductsFiltersComponent {
   setCategory(category: string | null): void {
     this.store.setCategory(category);
   }
+
+  onPriceChange(min: string, max: string): void {
+    const parsedMin = min ? Number(min) : null;
+    const parsedMax = max ? Number(max) : null;
+
+    const safeMin = parsedMin !== null && !Number.isNaN(parsedMin) ? parsedMin : null;
+    const safeMax = parsedMax !== null && !Number.isNaN(parsedMax) ? parsedMax : null;
+
+    this.store.setPriceFilter(safeMin, safeMax);
+  }
+
+  setMinRating(rating: number | null): void {
+    this.store.setMinRating(rating);
+  }
 }
